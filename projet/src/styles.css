@@ -6,25 +6,12 @@
 	font-family: "Poppins", sans-serif;
 }
 
+
+
 body{
   background-image: url('https://www.firstprinciplesinnovations.com/wp-content/uploads/2019/07/Construction_AdobeStock_122510298.jpeg');
   background-position: bottom left ;
 }
-
-
-
-.toplogo{
-  display: flex;
-  background-image: url('https://upload.wikimedia.org/wikipedia/fr/thumb/6/6c/Logo_Universit%C3%A9_Rennes_1_.svg/1280px-Logo_Universit%C3%A9_Rennes_1_.svg.png');
-  height: 70px;
-	background-color: rgba(255, 255, 255, 0.5);
-  background-size: 200px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-
-
 
 
 html, body { height: 100%; }
