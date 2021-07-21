@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { PasswordValidator } from './password.validator';
 
@@ -10,11 +10,13 @@ import { PasswordValidator } from './password.validator';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
+   aFormGroup!: FormGroup;
 
-  constructor(private fb:FormBuilder) { }
+
+  constructor(private formBuilder:FormBuilder) { }
 
 
-  registrationForm = this.fb.group({
+  registrationForm = this.formBuilder.group({
     Identifiant:['', [Validators.required]],
     MotDePasse: [''],
     confirmMotdepasse:['']
@@ -30,21 +32,21 @@ export class RegistrationComponent implements OnInit {
     Validators.email,
   ]);
 
-
-
   passwordControl = new FormControl('', [
     Validators.required
   ]);
 
-
-
   matcher = new MyErrorStateMatcher();
-
 
 
   visible = true;
 
+  siteKey:string="6Ldcra8bAAAAALPl2LeT8_wtlJkOkkvJwmMI7sde";
+
   ngOnInit(): void {
+    this.aFormGroup = this.formBuilder.group({
+      recaptcha: ['', Validators.required]
+    });
   }
 
 

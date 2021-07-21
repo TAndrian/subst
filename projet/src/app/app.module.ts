@@ -14,10 +14,11 @@ import {LoginComponent } from './login/login.component';
 import {FlexLayoutModule } from '@angular/flex-layout';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
-import {RegistrationComponent } from './registration/registration.component';
-import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
+import {RegistrationComponent} from './registration/registration.component';
+import {FooterComponent} from './footer/footer.component';
+import {HeaderComponent} from './header/header.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { NgxCaptchaModule } from 'ngx-captcha';
 
 
 
@@ -46,7 +47,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatToolbarModule,
     MatIconModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxCaptchaModule
 
   ],
   providers: [],

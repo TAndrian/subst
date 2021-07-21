@@ -54,8 +54,15 @@
 
       </mat-form-field>
 
+      <form [formGroup]="aFormGroup">
+        <ngx-recaptcha2 #captchaElem
+          [siteKey]="siteKey"
+          formControlName="recaptcha">
+        </ngx-recaptcha2>
+      </form>
 
-      <button class="button"  mat-raised-button type="submit"> Se Connecter </button>
+
+      <button class="button"  mat-raised-button type="submit"> S'inscrire </button>
     </form>
 
     <p style="font-size: 15px;"> <mat-icon style="padding-left: 9px;">help
@@ -63,3 +70,4 @@
   </mat-card>
 </div>
 
+<app-footer></app-footer>
