@@ -5,15 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-/*Liste des API utilisés pour le login */
+/*Liste des API utilisés pour le login et registration*/
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
-import { LoginComponent } from './login/login.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import {LoginComponent } from './login/login.component';
+import {FlexLayoutModule } from '@angular/flex-layout';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import {RegistrationComponent } from './registration/registration.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 
 
 
@@ -24,7 +29,10 @@ import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    RegistrationComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +44,10 @@ import {MatIconModule} from '@angular/material/icon';
     MatCardModule,
     FlexLayoutModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

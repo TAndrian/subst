@@ -1,0 +1,65 @@
+<app-header></app-header>
+
+<div fxLayoutAlign="center" class="registration">
+  <mat-card  fxFlex="30" >
+    <mat-toolbar class="toolbar" >
+      <span class="text">Inscription</span>
+    </mat-toolbar>
+
+    <form action="" fxLayout="stretch" fxLayout="column" class="reg-form" >
+
+      <label>Identifiant* :</label>
+      <mat-form-field appearance="fill">
+        <mat-label>Identifiant</mat-label>
+        <input matInput [formControl]="identifiantControl" [errorStateMatcher]="matcher">
+     <mat-error *ngIf="identifiantControl.hasError('required')">
+        Identifiant <strong>requise</strong>
+     </mat-error>
+      </mat-form-field>
+
+      <label>E-mail* :</label>
+      <mat-form-field appearance="fill">
+        <mat-label>E-mail</mat-label>
+        <input type="email" matInput [formControl]="emailControl" [errorStateMatcher]="matcher"
+           placeholder="Ex. email@example.com">
+        <mat-error *ngIf="emailControl.hasError('email') && !emailControl.hasError('required')">
+              Entrez un e-mail valide
+        </mat-error>
+        <mat-error *ngIf="emailControl.hasError('required')">
+           Email <strong>requise </strong>
+        </mat-error>
+      </mat-form-field>
+
+
+      <label >Mot de passe* :</label>
+      <mat-form-field appearance="fill">
+        <mat-label>Mot de passe</mat-label>
+        <input matInput [formControl]="passwordControl" [errorStateMatcher]="matcher" type="password" [type]= "visible ? 'password':'text'">
+        <mat-icon style="cursor: pointer;" matSuffix (click) ="visible = !visible">
+          {{visible ? 'visibility':'visibility_off'}}</mat-icon>
+
+        <mat-error *ngIf="passwordControl.hasError('required')">
+            Mot de passe <strong>requise</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <label >Confirmez le mot de passe* :</label>
+      <mat-form-field appearance="fill">
+        <mat-label>Confirmer mot de passe</mat-label>
+        <input matInput type="password" formControlName="confirmMotdepasse"  [class.is-invalid]="registrationForm.errors?.missMatch">
+
+        <mat-error *ngIf="registrationForm.errors?.missMatch">
+          Mot de passe incorrect
+      </mat-error>
+
+      </mat-form-field>
+
+
+      <button class="button"  mat-raised-button type="submit"> Se Connecter </button>
+    </form>
+
+    <p style="font-size: 15px;"> <mat-icon style="padding-left: 9px;">help
+    </mat-icon> Vous avez déjà un compte? <a routerLink="/login"> connectez-vous </a></p>
+  </mat-card>
+</div>
+
