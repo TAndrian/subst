@@ -10,6 +10,20 @@
     width: 100%;
     height: 60px;
 }
-.footer a{
-  text-decoration: none;
+
+footer span{
+  color: red;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (max-width:699px) {
+  .footer{
+    font-size: 10pt;
+  }
+
+  footer span{
+    font-size: 10pt;
+  }
+
 }

@@ -2,6 +2,21 @@
   margin-top: 50px;
 }
 
+.spacer{
+  flex: 1 1 auto;
+}
+
+mat-toolbar i {
+  color: aliceblue;
+  font-size: 30px;
+}
+
+button i {
+  color: rgb(5, 8, 10);
+  font-size: 30px;
+  margin-left: 20px;
+}
+
 .reg-form{
   padding: 20px;
 }
@@ -22,3 +37,19 @@
 .button:hover{
   background-color: rgb(34, 181, 218);
 }
+
+.recaptcha{
+  transform:scale(0.77);
+  -webkit-transform:scale(0.77);
+  transform-origin:0 0;
+  -webkit-transform-origin:0 0;
+}
+
+@media screen and (max-height: 767px){
+   .recaptcha {
+          transform:scale(0.77);
+          -webkit-transform:scale(0.77);
+          transform-origin:0 0;
+          -webkit-transform-origin:0 0;
+      }
+  }

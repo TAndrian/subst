@@ -4,6 +4,8 @@
   <mat-card  fxFlex="30" >
     <mat-toolbar class="toolbar" >
       <span class="text">Inscription</span>
+      <span class="spacer"></span>
+      <i  class="fas fa-address-book"></i>
     </mat-toolbar>
 
     <form action="" fxLayout="stretch" fxLayout="column" class="reg-form" >
@@ -12,9 +14,9 @@
       <mat-form-field appearance="fill">
         <mat-label>Identifiant</mat-label>
         <input matInput [formControl]="identifiantControl" [errorStateMatcher]="matcher">
-     <mat-error *ngIf="identifiantControl.hasError('required')">
+        <mat-error *ngIf="identifiantControl.hasError('required')">
         Identifiant <strong>requise</strong>
-     </mat-error>
+        </mat-error>
       </mat-form-field>
 
       <label>E-mail* :</label>
@@ -43,18 +45,7 @@
         </mat-error>
       </mat-form-field>
 
-      <label >Confirmez le mot de passe* :</label>
-      <mat-form-field appearance="fill">
-        <mat-label>Confirmer mot de passe</mat-label>
-        <input matInput type="password" formControlName="confirmMotdepasse"  [class.is-invalid]="registrationForm.errors?.missMatch">
-
-        <mat-error *ngIf="registrationForm.errors?.missMatch">
-          Mot de passe incorrect
-      </mat-error>
-
-      </mat-form-field>
-
-      <form [formGroup]="aFormGroup">
+      <form class="recaptcha" [formGroup]="aFormGroup">
         <ngx-recaptcha2 #captchaElem
           [siteKey]="siteKey"
           formControlName="recaptcha">
@@ -62,7 +53,9 @@
       </form>
 
 
-      <button class="button"  mat-raised-button type="submit"> S'inscrire </button>
+      <button class="button"  mat-raised-button type="submit"> S'inscrire <i class="fas fa-user-plus"></i>
+
+      </button>
     </form>
 
     <p style="font-size: 15px;"> <mat-icon style="padding-left: 9px;">help

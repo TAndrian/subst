@@ -9,11 +9,9 @@
   margin-top: 50px;
 }
 
-.icon{
-  padding-left: 5px;
-  display: flex;
-  position: relative;
-  color: aliceblue;
+mat-icon{
+  color: rgb(0, 0, 0);
+  padding-left: 9px;
 }
 
 
@@ -35,5 +33,21 @@
   background-color: rgb(34, 181, 218);
 }
 
+.spacer{
+  flex: 1 1 auto;
+}
+
+
+@media screen and (max-width:699px) {
+      .text {
+        font-size: 13pt;
+      }
+      p{
+        font-size: 12pt;
+      }
+      .button{
+        font-size: 10pt;
+      }
+}
 
 
