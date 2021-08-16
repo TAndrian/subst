@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import {  FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
-import { PasswordValidator } from './password.validator';
 
 
 @Component({
@@ -16,11 +15,11 @@ export class RegistrationComponent implements OnInit {
   constructor(private formBuilder:FormBuilder) { }
 
 
-  registrationForm = this.formBuilder.group({
+  /*registrationForm = this.formBuilder.group({
     Identifiant:['', [Validators.required]],
     MotDePasse: [''],
     confirmMotdepasse:['']
-  }, {Validators:PasswordValidator});
+  }, {Validators:PasswordValidator});*/
 
 
   identifiantControl = new FormControl('', [
